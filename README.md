@@ -12,6 +12,8 @@ chmod +x install.sh
 ```
 ## Currently supported OS/Distro 
 Arch Linux
+<br>Debian-based(Ubuntu, Debian)</br>
+Red Hat-based(CentOS,RHEL,Fedora)
 
 
 
