@@ -19,6 +19,6 @@ Red Hat-based(CentOS,RHEL,Fedora)
 <div align="center">
 
   ![image](https://github.com/user-attachments/assets/aaf73beb-2db5-40da-9ced-302907897a1a)
-  ![image](https://github.com/user-attachments/assets/e4e0323f-ff13-4eae-a500-fd55c7295720)
+  ![image](https://github.com/user-attachments/assets/b27df5bb-bdd2-442d-88af-fe9f08623be3)
 
 </div>
