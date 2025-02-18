@@ -96,7 +96,14 @@ if [[ $ssl_choice == "y" ]]; then
     sudo systemctl reload ${WEB_SERVER}
 fi
 
-IP_ADDRESS=$(hostname -I | awk '{print $1}')
+if command -v ip >/dev/null 2>&1; then
+    IP_ADDRESS=$(ip -4 addr show | awk '/inet / {print $2}' | cut -d'/' -f1 | head -n 1)
+elif command -v ifconfig >/dev/null 2>&1; then
+    IP_ADDRESS=$(ifconfig | awk '/inet / {print $2}' | head -n 1)
+else
+    IP_ADDRESS="Unknown"
+fi
+
 echo "Installation complete. Your $WEB_SERVER web server is now running."
-echo "Access it via: http://$IP_ADDRESS (Port 80) or https://$IP_ADDRESS (Port 443 if SSL is enabled)"
+echo "Access it via: $IP_ADDRESS (Port 80) or $IP_ADDRESS (Port 443 if SSL is enabled)"
 
