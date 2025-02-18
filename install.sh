@@ -96,4 +96,7 @@ if [[ $ssl_choice == "y" ]]; then
     sudo systemctl reload ${WEB_SERVER}
 fi
 
+IP_ADDRESS=$(hostname -I | awk '{print $1}')
 echo "Installation complete. Your $WEB_SERVER web server is now running."
+echo "Access it via: http://$IP_ADDRESS (Port 80) or https://$IP_ADDRESS (Port 443 if SSL is enabled)"
+
